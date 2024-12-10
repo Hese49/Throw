@@ -8,7 +8,7 @@ the necessary input data is given.
 
 The file  '**ThrowCalc.py**'  is used as a calculation module of the QUI file. This file can also be used as an independent program (if __name__ == "__main__"  at the end of the file). There is also available a file '**ThrowCalc_Test.py**' , where there are many opportunities for printing intermediate results in a problem cases.
 
-The file  '**ThrowExamples.RTF**'   shows a few examples of using the program to solve problems involving oblique throwing motion. There you can also find some test run results.
+The file '**TestRuns.txt**' shows many possibilities for using the program to solve problems related to oblique throwing.  In '**Picture.gif**' you can see the layout of the calculator. 
 
 PROGRAM FLOW    
     The user  enters the known quantities into QUI and those quantities are then sent as a  
