@@ -2,7 +2,8 @@ Test runs for 'Throwing_motion.py'
 
 SET 1  From ground to ground 
 A ball is kicked from the ground at an angle of 39.0 degrees. The initial velocity of the ball is 14.1 m/s.
-Finally, the ball hits the ground. The air resistance is  needless to be considered. Calculate the range of the ball.   (Result = 19.8 m)
+Finally, the ball hits the ground. The air resistance is  needless to be considered. Calculate the range of the ball. 
+(Result = 19.8 m)
 
 [0,    39.0,   14.1,  19.8,  0,    -38.9,   14.1,  1.81,  4.01,]   [ 11.0,  8.87,  11.0,  -8.87]
 [y0,   a0,      v0,    x1,   y1,     a1,    v1,    t,     mh, ]    [ v0x,   v0y,   v1x,   v1y  ]
