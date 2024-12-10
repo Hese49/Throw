@@ -1,0 +1,89 @@
+Test runs for 'Throwing_motion.py'
+
+SET 1  From ground to ground 
+A ball is kicked from the ground at an angle of 39.0 degrees. The initial velocity of the ball is 14.1 m/s. Finally, the ball hits the ground. The air resistance is  needless to be considered. Calculate the range of the ball.   (Result = 19.8 m)
+
+[0,    39.0,   14.1,  19.8,  0,    -38.9,   14.1,  1.81,  4.01,]   [ 11.0,  8.87,  11.0,  -8.87]
+[y0,   a0,      v0,    x1,   y1,     a1,    v1,    t,     mh, ]    [ v0x,   v0y,   v1x,   v1y  ]
+  0       1      2     3     4        5     6      7      8           9       10    11     12
+  0    39.0    14.1                   0                                                       Special 2a Initials to the ground
+  0    39.0           19.8   0                                                                Special :  v0=?
+  0            14.1   19.8   0                                                                Special : a0=?
+  0            14.1                   0            1.81                                       init.veloc + time  ->  angle , range
+  0    39.0                           0            1.81                                       angle + time  ->  init.veloc,  range
+  0                   19.8   0                     1.81                                       range + time ->  angle,  init.veloc
+
+SET 2   From ground to the target
+  [0.0, 39.0, 14.1, 16.44, 2.27, -28.0, 12.5, 1.5,  4.01,]  [11.0, 8.87, 11.0, -5.84
+  [y0,   a0,   v0,    x1,   y1,    a1,   v1,   t,    hm,]   [v0x, v0y,   v1x,   v1y]       
+   0    39.0        16.44  2.27                                                               Special 3c:  target -> v0  
+   0          14.1  16.44  2.27                                                               Special 4b:  target -> init.angle
+
+SET 3  From some initial elevation to the ground
+[2.0, 39.0, 14.1,  22.0,  0.0, -44.5, 15.4, 2.01, 6.01,] [10.9,  8.86, 11.0,  -10.9]
+[y0,   a0,   v0,    x1,    y1,   a1,   v1,   t,   hm,]   [v0x,   v0y,   v1x,   v1y]    
+  2   39.0   14.1          0                                                                  Special 2a: Initials to ground
+  2   39.0         22.0    0                                                                  Special 4b2:  range -> v0  
+
+SET 4  From some initial elevation to target
+[2.0, 39.0, 14.1, 16.44, 4.27, -28.0, 12.5, 1.5, 6.01,] [10.9,  8.87, 11.0, -5.84]
+[y0,   a0,   v0,    x1,   y1,    a1,   v1,   t,   hm,]  [v0x,   v0y,   v1x,   v1y]  
+  2   39.0  14.1                                                       1.5                    Special 2b:     time   ->  position            
+  2         14.1  16.44  4.27                                                                 Special 4b2:  target -> angle 
+
+[2,  38.5,   14.1,  22.0,    0,   -44.5, 15.4, 2.01, 6.01,]  [10.9,  8.86, 11.0, -10.9]
+[y0,  a0,     v0,    x1,     y1,    a1,   v1,   t,    hm,]   [v0x,   v0y,  v1x,   v1y]  
+ 2           14.1   22.0     0                                                                Special 4b2:   range -> angle 
+ 
+SET 5  Horizontal throw from some elevation to the ground
+[11,  0.0,   14.1,  21.1,   0,   -46.2,  20.4,  1.5,   11,]   [14.1, 0.0, 14.1,  -14.7]
+[y0,   a0,    v0,    x1,    y1,    a1,    v1,     t,   hm,]    [v0x, v0y,  v1x,   v1y]  
+11     0     14.1                  0                                                          Spec 2a:  Initials to ground ->
+11     0            21.1    0                                                                 Spec 3B:  init.veloc=?
+       0     14.1   21.1    0                                                                 Spec 1):   horizontal throw y0=? 
+
+SET 6  Downward throw to the ground
+[11,  -15,  14.1, 15.9, 0, -48.0, 20.4, 1.17, 11]        [13.6, -3.66, 13.6, -15.1]
+[y0,   a0,   v0,   x1,  y1,  a1,   v1,   t,   hm,]       [v0x,   v0y,  v1x,   v1y]
+ 11   -15   14.1             0                                                                Spec 2a):   Initials to ground
+ 11   -15         15.9  0                                                                     Spec 3b):   range -> v0
+ 11         14.1  15.9  0                                                                     Spec 4b2):  range + veloc -> angle
+ 11         14.1             0          1.17                                                  Spec 4c):   veloc + time -> angle, range
+
+SET 7   Throw straight up (a0 = 90 deg)
+  0      90     14.1                    0                   init.velocity, v1=0 -> max height, rise time                                      
+[0.0,    90.0,  14.1,  0.0,  0.0   90,  0,   1.44   10.1,] [0.0, 14.1, 0.0, 14.1]
+[ y0,    a0,     v0,   x1,   y1,   a1,  v1,   t,    hm,]   [v0x, v0y,  v1x, v1y]
+ 
+  0   90    14,1                        1.435                                           time -> 
+[0.0, 90.0, 14.1, 0.0, 10.1, 90.0, 0.0, 1.44, 10.1,]      [0.0, 14.1, 0.0, 0.0]
+[ y0,  a0,   v0,   x1,  y1,   a1,   v1,   t,    hm,]      [v0x, v0y,  v1x, v1y]
+
+
+  0   90    14.1                           1.2                                          time -> height
+[0.0, 90.0, 14.1,  0.0, 9.86,  90.0, 2.33, 1.2,  10.1,][0.0,  14.1,  0.0,  2.33]
+[y0,  a0,    v0,   x1,   y1,    a1,   v1,   t,   hm,]  [v0x,  v0y,   v1x,  v1y]
+
+  0   90    14.1       8.0                                                              height -> time
+[0.0, 90.0, 14.1, 0.0, 8.0, 0.0, 6.47, 0.778, 10.1,]   [0.0,  14.1, 0.0,  6.47]
+[y0,  a0,    v0,   x1,  y1,  a1,  v1,     t,   hm,]    [v0x,   v0y,  v1x,  v1y
+
+  5   90    14.1                   0                            init.elev + init.velocity -> max height
+[5.0, 90.0, 14.1, 0.0, 15.1, 90.0, 0.0, 1.44, 15.1     'na', 'na', 'na', 'na'] 
+[ y0, a0,    v0,   x1,  y1,   a1,  v1,   t,    hm,]   [v0x,   v0y,  v1x,   v1y]
+
+
+SET 8   Straight down drop (a0 = -90 deg) from some elevation
+[11    -90      0             0                                                               Just drop from 11.0 to the ground
+[11.0, -90.0,  0.0,   0.0,   0.0,  -90.0, 14.7, 1.5, 11.0,]  [0.0,  0.0,  0.0, -14.7]
+[y0,    a0,    v0,     x1,    y1,    a1,   v1,   t,   hm,]   [v0x,  v0y,  v1x,   v1y]
+
+ 11    -90      0                            1.0                                              height and the velocity after 1 sec?
+[11.0, -90.0,  0.0,  0.0,  6.1, -90.0, 9.81, 1.0, 11.0,]      0.0,  0.0,  0.0,  -9.81]
+[ y0,   a0,    v0,    x1,  y1,    a1,   v1,   t,   hm,]      [v0x,  v0y,  v1x,   v1y]
+
+ 11    -90      0         6                                                                 How long does it take to fall to 6m height?
+[11.0, -90.0,  0.0, 0.0, 6.0, -90.0, 9.9, 1.01, 11.0,]       0.0,   0.0,  0.0,  -9.9]
+[y0,    a0,    v0,   x1,  y1,   a1,   v1,   t,   hm,]        [v0x,  v0y,  v1x,   v1y]
+
+
